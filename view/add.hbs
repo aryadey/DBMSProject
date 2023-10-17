@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .container4 form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container4 {
+            background-color: rgb(115, 141, 180);
+            border-radius: 10px;
+            width: 300px;
+            border: 2px dashed blueviolet;
+            padding: 20px;
+            margin: auto;
+        }
+
+        form>input {
+            margin: 10px 0;
+            padding: 5px 2px;
+        }
+    </style>
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, -0.5), rgba(0, 0, 0, -0.5)), url("https://nordicapis.com/wp-content/uploads/6-Best-Free-and-Paid-Weather-APIs.png");
+            display: flex;
+            flex-direction: column;
+            margin: 2px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(241, 237, 244);
+        }
+
+        .menu a {
+            font-size: 35px;
+            font-weight: bolder;
+            color: rgb(79, 108, 140);
+            text-decoration: none;
+        }
+
+        .menu {
+            height: 40px;
+            margin: 10px;
+            padding: 2px 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1 style="margin: auto;">Weather Analysis</h1>
+    <div class="menu">
+        <a href="/add">Add Weather</a>
+        <a href="/search">Search Weather</a>
+        <a href="/update">Update Weather</a>
+        <a href="/delete">Delete Weather</a>
+        <a href="/view">Viwe Weather</a>
+    </div>
+
+    <div class="RS">
+
+        <div class="container4">
+            <h2>Add Weather</h2>
+            <hr>
+            <form action="/addstudent" method="get"">
+            <label for=" SName">Name</label>
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <label for="date">Date:</label>
+                <input type="text" name="date" placeholder="Enter date" required>
+                <label for="emai">Tempreture: </label>
+                <input type="text" name="tempr" placeholder="Enter tempreture" required>
+                <label for="emai">Humidity: </label>
+                <input type="text" name="humidity" placeholder="Enter " required>
+                
+                <input type="submit" value="Add Weather">
+                <a href="/">Back to home page</a>
+                {{#if mesg}}
+                <h3>Data inserted</h3>
+                {{/if}}
+
+                {{#if checkmesg}}
+                <h3>Allready present</h3>
+                {{/if}}
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
